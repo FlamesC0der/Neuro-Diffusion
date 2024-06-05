@@ -8,7 +8,7 @@ ROOT_DIR = os.path.dirname(__file__)
 
 
 async def get_random_start_image():
-    return random.choice(os.listdir('assets/start_images'))
+    return random.choice(os.listdir(os.path.join(ROOT_DIR, "assets/start_images")))
 
 
 async def activate_promo_code(tg_id: int, promo_code: str) -> int:
